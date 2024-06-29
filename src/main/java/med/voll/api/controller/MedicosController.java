@@ -48,7 +48,7 @@ public class MedicosController {
 	@Secured("ROLE_USER")
 	public ResponseEntity<Page<MedicoListRecord>> list(
 			@PageableDefault(size = 10, sort = {"nome"}, direction = Direction.DESC) Pageable pageable) {
-		Page<MedicoListRecord> medicoList = medicoRepository.findByAtivoTrue(pageable).map(MedicoListRecord::new);
+		Page<MedicoListRecord> medicoList = medicoRepository.findAllByAtivoTrue(pageable).map(MedicoListRecord::new);
 		return ResponseEntity.ok(medicoList);
 	}
 	
