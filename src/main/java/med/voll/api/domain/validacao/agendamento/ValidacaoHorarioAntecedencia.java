@@ -1,4 +1,4 @@
-package med.voll.api.domain.validacao;
+package med.voll.api.domain.validacao.agendamento;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import med.voll.api.domain.record.DadosAgendamentoConsulta;
 import med.voll.api.exceptions.ValidacaoException;
 
-@Component
+@Component("ValidadorHorarioAntecedenciaAgendamento")
 public class ValidacaoHorarioAntecedencia implements Validacao {
 	
 	@Override

@@ -51,5 +51,10 @@ public class TratarErrors {
 	public ResponseEntity<?> tratarErro500(Exception ex) {
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + ex.getLocalizedMessage());
 	}
-
+	
+	@ExceptionHandler(ValidacaoException.class)
+	public ResponseEntity<?> tratarErroRegraDeNegocio(ValidacaoException ex) {
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getLocalizedMessage());
+	}
+	
 }

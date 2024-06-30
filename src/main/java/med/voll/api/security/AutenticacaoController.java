@@ -1,4 +1,4 @@
-package med.voll.api.controller;
+package med.voll.api.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
 import med.voll.api.domain.UsuarioRecord;
-import med.voll.api.security.TokenRecord;
-import med.voll.api.security.Usuario;
 import med.voll.api.security.service.TokenService;
 
 @RestController

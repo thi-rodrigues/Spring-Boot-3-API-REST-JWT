@@ -1,8 +1,12 @@
 package med.voll.api.service;
 
 import med.voll.api.domain.record.DadosAgendamentoConsulta;
+import med.voll.api.domain.record.DadosCancelamentoConsulta;
+import med.voll.api.domain.record.DadosDetalhamentoConsulta;
 
 public interface AgendaConsultasService {
 
-	public void agendar(DadosAgendamentoConsulta agendamentoConsulta);
+	public DadosDetalhamentoConsulta agendar(DadosAgendamentoConsulta agendamentoConsulta);
+
+	void cancelar(DadosCancelamentoConsulta dadosCancelamentoConsulta);
 }
