@@ -65,7 +65,7 @@ public class AgendaConsultasServiceImpl implements AgendaConsultasService {
 		if (agendamentoConsulta.especialidade() == null)
 			throw new ValidacaoException("Especialidade é obrigatória quando o médico não for escolhido");
 		
-		return medicoRepository.esclherMedicoAleatorioLivreNaData(agendamentoConsulta.especialidade(), agendamentoConsulta.data());
+		return medicoRepository.escolherMedicoAleatorioLivreNaData(agendamentoConsulta.especialidade(), agendamentoConsulta.data());
 	}
 	
 	@Override
